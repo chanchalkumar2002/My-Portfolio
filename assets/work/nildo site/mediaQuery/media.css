@@ -1,0 +1,130 @@
+
+@media(max-width:992px){
+    footer{
+        flex-direction: column;
+    }
+    footer >.foot-left{
+        width: 70%;
+    }
+    footer >.foot-center{
+        justify-content: left;
+    }
+    footer >.foot-right{
+        justify-content: left;
+    }
+    footer >.foot-right{
+        width: 70%;
+    }
+    main >.boy >h2{
+    width: 66%;
+    }
+}
+@media(max-width:770px){
+    main >.boy >h2{
+        width: 100%;
+    }
+    main >.boy{
+        justify-content: space-around;
+    }
+    header >.head-left >h3{
+        font-size: 16px;
+    }
+    header >.head-right{
+        width:50px;
+    }
+    main >.vid-main >.center-text{
+        width: 90%;
+        min-height: 330px;
+        left: 5%;
+        top: 8%;
+    }
+    main >.vid-main >.center-text >h2{
+        font-size: 70px;
+        line-height: 0.9;
+    }
+    main >.vid-main >.end-text >.end-arrw{
+        display: none;
+    }
+    main >.vid-main >.end-text{
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    main >.vid-main >.end-text >.end-left{
+        min-height: 30px;
+        width: 60%;
+    }
+    main >.vid-main >.end-text >.end-left >h3{
+        font-size: 15px;
+        color: #bcaa92;
+    }
+    main >.vid-main >.end-text >.end-right{
+        min-height: 30px;
+        align-items: center;
+        justify-content: center;
+    }
+    main >.vid-main >.end-text >.end-right >h3{
+        font-size: 15px;
+        color: #bcaa92;
+    }
+    main >.docu{
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+    main >.docu >.docu-text{
+        width: 100%;
+    }
+    main >.docu >.docu-img{
+        align-items: flex-start;
+        width: 100%;
+    }
+    main >.nildo{
+        flex-direction: column-reverse;
+    }
+    main >.nildo >.nildo-img{
+        align-items: flex-start;
+        width: 100%;
+    }
+    main >.nildo >.nildo-text{
+        width: 100%;
+    }
+    main >.itali{
+        flex-direction: column-reverse;
+    }
+    main >.itali >.itali-img{
+        align-items: flex-start;
+        width: 100%;
+    }
+    main >.itali >.itali-text{
+        width: 100%;
+    }
+    main >.life{
+        flex-direction: column-reverse;
+    }
+    main >.life >.life-img{
+        align-items: flex-start;
+        width: 100%;
+    }
+    main >.life >.life-text{
+        width: 100%;
+    }
+    main >.press{
+        flex-direction: column-reverse;
+    }
+    main >.press >.press-img{
+        
+        width: 100%;
+    }
+    main >.press >.press-text{
+        width: 100%;
+    }
+    main >.credit{
+        flex-direction: column-reverse;
+    }
+    main >.credit >.credit-img{
+        width: 100%;   
+    }
+    main >.credit >.credit-text{
+        width: 100%;
+    }
+}

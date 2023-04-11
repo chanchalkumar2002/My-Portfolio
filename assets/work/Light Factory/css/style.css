@@ -1,0 +1,744 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* cursor code */
+
+.cursor{
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    mix-blend-mode: difference;
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+body{
+    min-height: 200vh;
+    background-color: black;
+    cursor: none;
+}
+
+/* starting animation code start here */
+
+.first{
+    width: 50%;
+    height: 100vh;
+    background-color:  rgb(205, 232, 48);
+    position: fixed;
+    top: -100%;
+    left: 0%;
+    z-index: 1050;
+    animation: left 5s linear 1 forwards;
+    animation-delay: 0.7s;
+}
+@keyframes left {
+    0%{
+        left:0%;
+        top: -100%;
+    }
+    5.1%{
+        left: 0%;
+        top: 0%;
+    }
+    60%{
+        left: 0%;
+        top: 0%;
+    }
+    100%{
+        left: -100%;
+        top: 0%;
+    }
+}
+.first > .box-cir{
+    width: 150px;
+    height: 60px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: calc(50% - 30px);
+}
+.first > .box-cir >span{
+    font-size: 35px;
+    font-family: sans-serif;
+    font-weight:bold;
+}
+.first > .box-cir >.f-box{
+    width: 35px;
+    height: 35px;
+    background-color: black;
+    border-radius: 5px;
+    position: relative;
+    animation-name: rot;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes rot {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.first > .box-cir >.f-box >.f-cir{
+    width: 30px;
+    height: 30px;
+    background-color: rgb(205, 232, 48);
+    border-radius: 50%;
+    position: absolute;
+    top: calc(50% - 15px);
+    left: calc(50% - 15px);
+}
+
+.second{
+    width: 50%;
+    height: 100vh;
+    background-color: rgb(205, 232, 48);
+    position: fixed;
+    top: -100%;
+    right: 0%;
+    z-index: 1050;
+    animation: right 5s linear 1 forwards;
+    animation-delay: 0.7s;
+}
+@keyframes right {
+    0%{
+        right:0%;
+        top: -100%;
+    }
+    5.1%{
+        right: 0%;
+        top: 0%;
+    }
+    60%{
+        right: 0%;
+        top: 0%;
+    }
+    100%{
+        right: -100%;
+        top: 0%;
+    }
+}
+.second >.fac{
+    width: 140px;
+    height: 60px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    position: absolute;
+    top: calc(50% - 30px);
+}
+.second >.fac >span{
+    font-size: 35px;
+    font-family: sans-serif;
+    font-weight:bold;
+}
+.third{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(251, 108, 132);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    animation-name: blk-frst;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes blk-frst {
+    0%{
+        top:0%;
+        left: 0%;
+    }
+    70%{
+        top:0%;
+        left: 0%;
+    }
+    100%{
+        top:-100%;
+        left: 0%;
+    }
+} 
+ .fourth{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(63, 244, 46);
+    position: fixed;
+    top: -100%;
+    left: 0;
+    z-index: 1000;
+    animation-name: grn;
+    animation-duration: 1.2s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes grn{
+    0%{
+        top: -100%;
+    }
+    10%{
+        top: -100%;
+    }
+    32%{
+        top: 0%;
+    }
+    90%{
+        top: 0%;
+    }
+    100%{
+        display: none;
+    }
+} 
+.fifth{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(252, 63, 176);
+    position: fixed;
+    top: -100%;
+    left: 0;
+    z-index: 1000;    
+    animation-name: pnk;
+    animation-duration: 1.2s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards;
+}
+@keyframes pnk{
+    0%{
+        top: -100%;
+    }
+    10%{
+        top: -100%;
+    }
+    32%{
+        top: 0%;
+    }
+    90%{
+        top: 0%;
+    }
+    100%{
+        display: none;
+    }
+}
+
+/* header code start here */
+
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+header >nav{
+    max-width: 1920px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    
+}
+header >nav >.left{
+    width: 30%;
+    min-height: 100px;
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+}
+header >nav >.right{
+    width: 40%;
+    min-height: 100px;
+    display: flex;
+    justify-content:end;
+    column-gap: 30px;
+    align-items: center;
+    padding: 0 25px;
+}
+header >nav >.right >a{
+    text-decoration:none;
+    color: white;
+    font-family: sans-serif;
+    font-size: 20px;
+    border: 1px solid white;
+    padding: 15px 25px;
+    border-radius: 30px;
+}
+header >nav >.right >.rig-line{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid white;
+    position: relative;
+}
+header >nav >.right >.rig-line::before{
+    content: '';
+    width: 70%;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    left: calc(50% - 35%);
+    top: 35%;
+}
+header >nav >.right >.rig-line::after{
+    content: '';
+    width: 70%;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    left: calc(50% - 35%);
+    bottom: 35%;
+}
+
+/* all section code start here */
+
+main{
+    width: 100%;
+    position: relative;
+    top: 100px;
+    padding: 25px;
+}
+main >.text-vid{
+    max-width: 1920px;
+    min-height: 650px;
+    margin: 0px auto;
+    position: relative;
+}
+main >.text-vid >.money-vid{
+    width: 77%;
+    height: 465px;
+    border-radius: 15px;
+    position: absolute;
+    right: 0;
+    bottom: 40px;
+}
+main >.text-vid >.money-vid >video{
+    width: 100%;
+    border-radius: 15px;
+    height: 100%;
+    object-fit: cover;
+}
+main >.text-vid >.idea-film{
+    width: 100%;
+    padding: 10px;
+    position: relative;
+}
+main >.text-vid >.idea-film >h2{
+    font-family: sans-serif;
+    font-weight: 100;
+    color: whitesmoke;
+    font-size: 130px;
+}
+main >.text-vid >.idea-film >p{
+    font-family: sans-serif;
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 13px;
+    position: absolute;
+    bottom: 40px;
+    right: 10px;
+}
+main >.text-vid >.move{
+    width: 35%;
+    position: relative;
+    z-index: 2;
+}
+main >.text-vid >.move::before{
+    content: '';
+    width: 90%;
+    height: 2px;
+    background-color: whitesmoke;
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+}
+main >.text-vid >.move::after{
+    content: '';
+    width: 2px;
+    height: 50%;
+    background-color: whitesmoke;
+    position: absolute;
+    left: 0px;
+    top: 35px;
+}
+main >.text-vid >.move >h2{
+    font-family: sans-serif;
+    color: whitesmoke;
+    font-weight: 100;
+    text-align: center;
+    font-size: 130px;
+}
+main >.text-vid >.move >p{
+    transform: rotate(-90deg);
+    color: whitesmoke;
+    font-family: sans-serif;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+    left: -30px;
+}
+main >.text-vid >.text-rot{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0px;
+    right: 10%;
+    animation-name: text-rot;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes text-rot {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+    
+}
+
+main >.text-vid >.text-rot span{
+    color: whitesmoke;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+main >.text-vid >.text-rot >.r{
+    position: absolute;
+    top: 5px;
+    transform: rotate(-50deg);
+}
+main >.text-vid >.text-rot >.e{
+    position: absolute;
+    left: 11px;
+    top: -5px;
+    transform: rotate(-35deg);
+}
+main >.text-vid >.text-rot >.a{
+    position: absolute;
+    left: 22px;
+    top: -12px;
+    transform: rotate(-27deg);
+}
+main >.text-vid >.text-rot >.l{
+    position: absolute;
+    left: 37px;
+    top: -16px;
+    transform: rotate(-8deg);
+}
+main >.text-vid >.text-rot >.l-2{
+    position: absolute;
+    left: 49px;
+    top: -16px;
+    transform: rotate(4deg);
+}
+main >.text-vid >.text-rot >.y{
+    position: absolute;
+    left: 59px;
+    top: -15px;
+    transform: rotate(15deg);
+}
+main >.text-vid >.text-rot >.g{
+    position: absolute;
+    left: 77px;
+    top: -7px;
+    transform: rotate(45deg);
+}
+main >.text-vid >.text-rot >.o{
+    position: absolute;
+    left: 88px;
+    top: 4px;
+    transform: rotate(40deg);
+}
+main >.text-vid >.text-rot >.o{
+    position: absolute;
+    left: 88px;
+    top: 4px;
+    transform: rotate(40deg);
+}
+main >.text-vid >.text-rot >.o-2{
+    position: absolute;
+    left: 96px;
+    top: 18px;
+    transform: rotate(57deg);
+}
+main >.text-vid >.text-rot >.d{
+    position: absolute;
+    left: 100px;
+    top: 34px;
+    transform: rotate(80deg);
+}
+main >.text-vid >.text-rot >.v{
+    position: absolute;
+    left: 96px;
+    top: 60px;
+    transform: rotate(115deg);
+}
+main >.text-vid >.text-rot >.i{
+    position: absolute;
+    left: 94px;
+    top: 72px;
+    transform: rotate(120deg);
+}
+main >.text-vid >.text-rot >.d-2{
+    position: absolute;
+    left: 81px;
+    top: 82px;
+    transform: rotate(131deg);
+}
+main >.text-vid >.text-rot >.e-2{
+    position: absolute;
+    left: 67px;
+    top: 91px;
+    transform: rotate(154deg);
+}
+main >.text-vid >.text-rot >.o-3{
+    position: absolute;
+    left: 51px;
+    top: 95px;
+    transform: rotate(154deg);
+}
+main >.text-vid >.text-rot >.l-3{
+    position: absolute;
+    left: 30px;
+    top: 95px;
+    transform: rotate(198deg);
+}
+main >.text-vid >.text-rot >.i-2{
+    position: absolute;
+    left: 22px;
+    top: 90px;
+    transform: rotate(210deg);
+}
+main >.text-vid >.text-rot >.g-2{
+    position: absolute;
+    left: 7px;
+    top: 83px;
+    transform: rotate(225deg);
+}
+main >.text-vid >.text-rot >.h{
+    position: absolute;
+    left: -4px;
+    top: 69px;
+    transform: rotate(234deg);
+}
+main >.text-vid >.text-rot >.t{
+    position: absolute;
+    left: -10px;
+    top: 54px;
+    transform: rotate(244deg);
+}
+main >.text-vid >.text-rot >.f{
+    position: absolute;
+    left: -11px;
+    top: 28px;
+    transform: rotate(277deg);
+}
+main >.lig-text{
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+main >.lig-text >h3{
+    font-family: sans-serif;
+    font-size: 45px;
+    color: rgb(180, 177, 177);
+    text-align:center;
+}
+main >.lig-text >h3 >span{
+    color: whitesmoke;
+}
+main >.lig-text >h3 >.green{
+    color: greenyellow;
+}
+main >.lig-text >h3 >.pink-box{
+    width: 30px;
+    height: 30px;
+    background-color: rgb(234, 55, 180);
+    border-radius: 5px;
+    display: inline-block;
+    position: relative;
+    animation-name: pink;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes pink {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+main >.lig-text >h3 >.pink-box >.blk-box{
+    width: 25px;
+    height: 25px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: calc(50% - 12.5px);
+    left: calc(50% - 12.5px);
+}
+main >.lig-text >h3 >.grn-box{
+    width: 30px;
+    height: 30px;
+    background-color: greenyellow;
+    border-radius: 5px;
+    display: inline-block;
+    position: relative;
+    animation-name: green;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes green {
+    0%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+main >.lig-text >h3 >.grn-box >.blk-box-2{
+    width: 25px;
+    height: 25px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: calc(50% - 12.5px);
+    left: calc(50% - 12.5px);
+}
+main >.work{
+    max-width: 1920px;
+    margin: 30px auto;
+}
+main >.work >h2{
+    font-family: sans-serif;
+    font-size: 90px;
+    text-align: center;
+    color: whitesmoke;
+    font-weight: 100;
+}
+main >.two-vid{
+    max-width: 1920px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+main >.two-vid >.left-vid{
+    width: 49%;
+    height: 600px;
+    border-radius: 15px;
+    position: relative;
+}
+main >.two-vid >.left-vid >.lft-vid{
+    width: 100%;
+    height: 100%;   
+    object-fit: cover;
+    border-radius: 15px;
+}
+main >.two-vid >.left-vid >h3{
+    color: rgb(250, 243, 243);
+    font-family: emoji;
+    position: absolute;
+    bottom: 55px;
+    left: 20px;
+    font-size: 40px;
+    opacity: 0;
+    transition: all 0.4s;
+}
+main >.two-vid >.left-vid:hover >h3{
+    opacity: 1;
+}
+main >.two-vid >.left-vid >p{
+    color: rgb(250, 243, 243);
+    font-family: sans-serif;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    font-size: 20px;
+    opacity: 0;
+    transition: all 0.4s;
+}
+main >.two-vid >.left-vid:hover >p{
+    opacity: 1;
+}
+main >.two-vid >.right-vid{
+    width: 49%;
+    height: 600px;
+    border-radius: 15px;
+    position: relative;
+    transition: all 3s;
+}
+main >.two-vid >.right-vid >.rgt-vid{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    
+}
+main >.two-vid >.right-vid >h3{
+    color: rgb(250, 243, 243);
+    font-family: emoji;
+    position: absolute;
+    bottom: 55px;
+    left: 20px;
+    font-size: 40px;
+    opacity: 0;
+    transition: all 0.4s;
+}
+main >.two-vid >.right-vid >p{
+    color: rgb(250, 243, 243);
+    font-family: sans-serif;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    font-size: 20px;
+    opacity: 0;
+    transition: all 0.4s;
+}
+main >.two-vid >.right-vid:hover >h3{
+    opacity: 1;
+}
+main >.two-vid >.right-vid:hover >p{
+    opacity: 1;
+}
+main >.sin-vid{
+    max-width: 1920px;
+    height: 550px;
+    margin: 50px auto;
+    background-color: brown;
+    border-radius: 15px;
+    position: relative;
+}
+main >.sin-vid >video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+main >.sin-vid >h3{
+    color: rgb(250, 243, 243);
+    font-family: emoji;
+    position: absolute;
+    bottom: 30px;
+    left: 80px;
+    font-size: 30px;
+}

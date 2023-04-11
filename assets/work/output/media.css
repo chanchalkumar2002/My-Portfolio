@@ -1,0 +1,149 @@
+
+
+@media(max-width:1275px){
+    main >.take >h2{
+        font-size: 52px;
+    }
+}
+
+@media(max-width:956px){
+    main >.take >h2{
+        font-size: 40px;
+    }
+}
+
+@media(max-width:820px){
+    header >nav >.rights{
+        display: none;
+    }
+    
+    header >nav >h2{
+        font-size: 45px;
+    }
+    header >nav{
+        width: 100%;
+        column-gap: 155px;
+        justify-content: end;
+    }
+    header >nav >h3{
+        font-size: 25px;
+    }
+    main >.take >h2{
+        width: 300px;
+        margin-top: 20px;
+        font-size: 60px;
+    }
+    main >.take span{
+        display: none;
+    }
+  
+    main >.vid-arrw >.video{
+        display: block;
+        width: 100%;
+    }
+    main >.vid-arrw >.arrw{
+        display: none;
+    }
+    main >.outpost >.eth{
+        display: none;
+    }
+    main >.future-sec >.fut-img >p{
+        display: none;
+    }
+    main >.aston-img >p{
+        display: none;
+    }
+    main >.home-img >p{
+        display: none;
+    }
+    main >.outpost >h2{
+        font-size: 50px;
+    }
+    main >.outpost >p{
+        width:533px;
+        font-size: 25px;
+    }
+    main >.outpost >h5{ 
+        font-size: 25px;
+        width: 240px;
+    }
+    main >.future-sec >h4{
+        font-size: 23px;
+        left: 40px;
+        text-align: left;
+    }
+    main >.future-sec >.fut-img{
+        flex-wrap:wrap-reverse;
+        justify-content:left;
+        row-gap: 10px;
+    }
+    main >.future-sec{
+        min-height: 700px;
+    }
+    main >.aston-img{
+        flex-wrap: wrap;
+        row-gap: 10px;
+    }
+    main >.home-img >h2{
+        display: block;
+        text-align:left;
+        width: 40%;
+    }
+    main >.home-img{
+        flex-wrap:wrap-reverse;
+        row-gap: 10px;
+        justify-content: left;
+        padding: 0 0 0 190px;
+    }
+    footer >.out-main >.out-para-1{
+        display: none;
+    }
+    footer >.out-main >.out-para-2{
+        display: none;
+    }
+    footer >.out-main-2{
+        flex-direction: column;
+        row-gap: 10px;
+    }
+    footer{
+        padding: 30px 12px 30px 12px;
+        position: relative;
+    }
+    footer >.out-main-2 >.our-add >p{
+        font-size: 14px;
+    }
+    footer >.out-main-2 >.our-add >h4{
+        font-size: 18px;
+        width: 180px;
+    }
+    footer >.out-main-2 >.our-add >h6{
+        width: 320px;
+        font-size: 13px;
+        position: absolute;
+        left: 30px;
+        bottom: 30px;
+    }
+    footer >.out-main-2 >.connect >h4{
+        position: absolute;
+        right: 30px;
+        bottom: 30px;
+    }
+    footer >.out-main-2 >.our-add{
+        border: none;
+    }
+    footer >.out-main-2 >.get-in{
+        border: none;
+    }
+    footer >.out-main-2 >.connect{
+        border: none;
+    }
+    footer >.out-main-2 >.get-in >p{
+        font-size: 14px;
+    }
+    footer >.out-main-2 >.get-in >h3{
+        font-size: 18px;
+    }
+    footer >.out-main-2 >.connect >p{
+        font-size: 14px;
+    }
+}

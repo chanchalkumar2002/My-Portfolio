@@ -1,0 +1,1249 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    --text-bl: rgb(149, 146, 241);
+    --text-col: rgb(233, 229, 229);
+    --bg-ani:rgb(27, 27, 27);
+    --bg-col: #14021a;
+    --bg-lgt-bl: rgba(55, 55, 90, 0.514);
+    --per-col: black;
+    --port-col:rgba(242, 236, 236, 0.505);
+    --foot-col:rgb(133, 130, 234);
+}
+
+.theme{
+    --text-bl: rgb(123, 123, 124);
+    --text-col:rgb(54, 54, 54);
+    --bg-col:rgb(235, 240, 242);
+    --bg-lgt-bl: rgba(180, 181, 181, 0.498);
+    --per-col: white;
+    --port-col:rgb(199, 195, 195);
+    --foot-col:rgb(152, 151, 151);
+}
+
+@font-face {
+    font-family: ser;
+    src: url('../assets/fonts/ser.ttf');
+}
+
+/* starting animation code start here */
+
+.main-ani > .first-ani{
+    width: 25%;
+    height: 100%;
+    background:var(--bg-ani);
+    position: fixed;
+    left: 0;
+    top: 0%;
+    z-index: 4;
+    animation: one 5s ease-out 1 forwards;
+}
+
+@keyframes one {
+    85%{
+        top: 0;
+    }
+    100%{
+        top: -100%;
+    }
+}
+
+.main-ani > .second-ani{
+    width: 25%;
+    height: 100%;
+    background:var(--bg-ani);
+    position: fixed;
+    top: 0%;
+    left: 25%;
+    z-index: 4;
+    animation: two 5s ease-out 0.2s 1 forwards;
+}
+@keyframes two {
+    85%{
+        top: 0;
+    }
+    100%{
+        top: -100%;
+    }
+}
+
+.main-ani > .third-ani{
+    width: 25%;
+    height: 100%;
+    background:var(--bg-ani);
+    position: fixed;
+    right: 25%;
+    top: 0%;
+    z-index: 4;
+    animation: three 5s ease-out 0.4s 1 forwards;
+}
+@keyframes three {
+    85%{
+        top: 0;
+    }
+    100%{
+        top: -100%;
+    }
+}
+
+.main-ani > .fourth-ani{
+    width: 25%;
+    height: 100%;
+    background:var(--bg-ani);
+    position: fixed;
+    right: 0;
+    top: 0%;
+    z-index: 4;
+    animation: four 5s ease-out 0.6s 1 forwards;
+}
+@keyframes four {
+    85%{
+        top: 0;
+    }
+    100%{
+        top: -100%;
+    }
+}
+
+.main-ani >.ck{
+    width: 500px;
+    height: 360px;
+    position: fixed;
+    z-index: 6;
+    top: calc(50% - 180px);
+    left: calc(50% - 250px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: ck-up 5s linear 1 forwards;
+}
+@keyframes ck-up {
+    87%{
+        top: calc(50% - 180px);
+        left: calc(50% - 250px); 
+    }
+    100%{
+        top: -100%;
+    }
+}
+
+.main-ani >.ck >.ck-text{
+    font-size: 230px;
+    transform: scale(0) rotate(360deg);
+    color: white;
+    transition: all 1s;
+    font-family: ser;
+}
+
+.main-ani >.ck >.text-ani{
+    transform: scale(1) rotate(-15deg);
+    box-shadow: 0 0 15px 2px red;
+}
+
+.main-ani >.ck >.one{
+    width: 7px;
+    background-color: white;
+    position: absolute;
+    top: -20px;
+    left: 0;
+    animation: line1 1s linear 1 forwards;
+    animation-delay: 1s;
+}
+@keyframes line1 {
+    0%{
+        height: 0px;
+    }
+    100%{
+        height: 250px;
+    }
+}
+
+.main-ani >.ck >.one::before{
+    content: '';
+    height: 7px; 
+    background-color: white;
+    position: absolute;
+    top: 20px;
+    left: -20px;
+    animation: line2 1s linear 1 forwards;
+    animation-delay: 1s;
+}
+@keyframes line2 {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 250px;
+    }
+}
+
+.main-ani >.ck >.two{
+    width: 7px;
+    background-color: white;
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    animation: line3 1s linear 1 forwards;
+    animation-delay: 1s;
+}
+@keyframes line3 {
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 250px;
+    }
+}
+
+.main-ani >.ck >.two::before{
+    content: '';
+    height: 7px;
+    background-color: white;
+    position: absolute;
+    bottom: 20px;
+    right: -20px;
+    animation: line4 1s linear 1 forwards;
+    animation-delay: 1s;
+}
+@keyframes line4 {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 250px;
+    }
+}
+
+/* header code start here */
+
+header{
+    width: 100%;
+    background-color: var(--bg-col); 
+    position: fixed;
+    z-index: 2;
+}
+header > nav{
+    max-width: 1920px;
+    margin: 0 auto;
+    display: flex;
+    box-shadow: 0 0 8px 0px var(--text-col);
+    justify-content: space-between;
+}
+header > nav > .h-ck{
+    width: 20%;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header > nav > .h-ck > h2{
+    font-size: 40px;
+    font-family: ser;
+    color: var(--text-bl);
+}
+
+header > nav > .h-ck > h2 > span{
+    color: var(--text-bl);
+}
+
+header > nav >.t-btn{
+    width: 15%;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header > nav >.t-btn >i{
+    font-size: 30px;
+    color: var(--text-col);
+}
+
+header > nav >.t-btn >.fa-moon{
+    display: none;
+}
+
+/* main css start here */
+
+main {
+    width: 100%;
+}
+
+main > #home-sec{
+    width: 100%;
+    background-color: var(--bg-col);
+    position: fixed;
+    top: 80px;
+} 
+
+main > #home-sec >.home-d{
+    max-width: 1920px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+}
+
+main > #home-sec >.home-d >.home-lft{
+    width: 50%;
+    height: 100%;
+    padding-left: 70px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    justify-content: center;
+}
+
+main > #home-sec >.home-d >.home-lft p{
+    font-weight: bold;
+    font-family: sans-serif;
+    color: var(--text-col);
+    font-size: 25px;
+}
+
+main > #home-sec >.home-d >.home-lft >.web{
+   color: var(--text-col);
+   font-size: 11.5px;
+}
+
+main > #home-sec >.home-d >.home-lft >p >#name{
+    font-size: 60px;
+}
+
+main > #home-sec >.home-d >.home-lft >a{
+    text-decoration: none;
+}
+
+main > #home-sec >.home-d >.home-lft >a >.down{
+    width: 170px;
+    height: 60px;
+    box-shadow: 0 0 10px 1px var(--text-bl);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+main > #home-sec >.home-d >.home-lft >a >.down >h2{
+    color: var(--text-bl);
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+main > #home-sec >.home-d >.home-lft >a >.down:hover{
+    background-color: var(--text-bl);
+    color: black;
+}
+
+main > #home-sec >.home-d >.home-lft >a >.down:hover >h2{
+    color: black;
+}
+
+main > #home-sec >.home-d >.home-lft >.cont{
+    width: 110px;
+    height: 40px;
+    border-radius: 15px;
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+main > #home-sec >.home-d >.home-lft >.cont i{
+    color: var(--text-col);
+    font-size: 18px;
+    transition: all 0.5s;
+}
+main > #home-sec >.home-d >.home-lft >.cont i:hover{
+    transform: scale(1.4);
+}
+
+main > #home-sec >.home-d >.home-rgt{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+ main > #home-sec >.home-d >.home-rgt >.my-img{
+    width: 60%;
+    height: 77vh;
+    border-radius: 70px;
+    background: url(../assets/img/img1.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 5vh;
+} 
+
+/* header menu css here */
+
+main > .head{
+    width: 320px;
+    height: 70px;
+    box-shadow: 0 0 8px 0px var(--text-bl);
+    position: fixed;
+    bottom: 20px;
+    left: calc(50% - 160px);
+    border-radius: 40px;
+    z-index: 2;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+main > .head > a >i{
+    color: var(--text-col);
+    font-size: 20px;
+}
+
+/* about section css here */
+
+main > #about-sec{
+    max-width: 1920px;
+    height: 100vh;
+    background-color:var(--bg-col);
+    margin: 0 auto;
+    position: relative;
+    top: 100vh;
+    display: flex;
+    overflow: hidden;
+}
+main > #about-sec >.abt-text-top{
+    width: 220px;
+    height: 100px;
+    box-shadow: 0 0 10px 1px var(--text-bl);
+    border-radius: 15px;
+    position: absolute;
+    top: 85px;
+    left: calc(50% - 110px);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+main > #about-sec >.abt-text-top >p{
+    font-family: sans-serif;
+    font-weight: bold;
+    color: var(--text-col);
+}
+main > #about-sec >.abt-text-top >h2{
+    font-family: ser;
+    font-size: 40px;
+    color: var(--text-bl);
+}
+
+main > #about-sec >.abt-left{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 90px;
+}
+
+main > #about-sec >.abt-left >.abt-img{
+    width: 75%;
+    height: 63vh;
+    border: 2px solid var(--text-col);
+    border-radius: 50% 50% 10px 10px;
+    background: url(../assets/img/abt\ img.jpeg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+main > #about-sec >.abt-right{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-right: 80px;
+    justify-content: end;
+}
+
+main > #about-sec >.abt-right >.abt-text{
+    width: 75%;
+    height: 65%;
+    border-radius: 15px;
+    padding: 15px;
+    background-color: var(--bg-lgt-bl);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+main > #about-sec >.abt-right >.abt-text > p{
+    list-style: none;
+    font-size: 18px;
+    font-family: ser;
+    color: var(--text-col);
+}
+
+main > #about-sec >.abt-right .cont-me{
+    width: 140px;
+    height: 50px;
+    background-color: var(--text-bl);
+    position: absolute;
+    top: calc(60% - 25px);
+    left: calc(50% - 70px);
+    border-radius: 15px;
+    box-shadow: 0 0 10px 0px var(--text-bl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main > #about-sec >.abt-right .cont-me >p{
+    color: var(--per-col);
+    font-size: 22px;
+    font-family: ser;
+    font-weight: bold;
+}
+
+/* skill section css here */
+
+main > #skill-sec{
+    max-width: 1920px;
+    height: 100vh;
+    background-color:var(--bg-col);
+    margin: 0 auto;
+    position: relative;
+    top: 100vh;
+    display: flex;
+    overflow: hidden;
+}
+
+main > #skill-sec >.skill-text-top{
+    width: 200px;
+    height: 100px;
+    box-shadow: 0 0 10px 1px var(--text-bl);
+    border-radius: 15px;
+    position: absolute;
+    top: 85px;
+    left: calc(50% - 100px);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+main > #skill-sec >.skill-text-top >p{
+    font-family: sans-serif;
+    font-weight: bold;
+    color: var(--text-col);
+    font-size: 13px;
+}
+
+main > #skill-sec >.skill-text-top >h2{
+    font-family: ser;
+    font-size: 45px;
+    color: var(--text-bl);
+}
+
+main > #skill-sec >.boot-box{
+    width: 40%;
+    height: 110px;
+    background-color: var(--bg-lgt-bl);
+    border-radius: 15px;
+    padding: 15px;
+    position: absolute;
+    top: 470px;
+    left: 30%;
+}
+
+main > #skill-sec >.boot-box >img{
+    width: 100px;
+}
+
+main > #skill-sec >.boot-box >span{
+    position: absolute;
+    left: 100px;
+    top: 35px;
+}
+
+main > #skill-sec > .boot-box >.boot-per{
+    width: 80%;
+    height: 5px;
+    background-color: var(--text-col);
+    position: relative;
+    left: 20px;
+}
+
+main > #skill-sec > .boot-box >.boot-per::before{
+    content: '80%';
+    width: 35px;
+    height: 35px;
+    background-color: var(--text-col);
+    color: var(--per-col);
+    border-radius: 10px 10px 80px 80px;
+    position: absolute;
+    right: -13px;
+    bottom: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main > #skill-sec >.skill-lft{
+    width: 50%;
+    height: 100%;
+    padding-top: 200px;
+    display: flex;
+    align-items: center;
+    row-gap: 30px;
+    flex-direction: column;
+}
+
+main > #skill-sec >.skill-lft >.html-box{
+    width: 80%;
+    height: 110px;
+    background-color: var(--bg-lgt-bl);
+    border-radius: 20px;
+    padding: 15px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main > #skill-sec >.skill-lft img{
+    width: 60px;
+}
+
+main > #skill-sec span{
+    color: var(--text-col);
+    font-family: ser;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+main > #skill-sec >.skill-lft >.html-box >span{
+    position: absolute;
+    left: 100px;
+    top: 40px;
+}
+
+main > #skill-sec >.skill-lft >.html-box >.html-per{
+    width: 90%;
+    height: 5px;
+    background-color: var(--text-col);
+    position: relative;
+}
+
+main > #skill-sec >.skill-lft >.html-box >.html-per::before{
+    content: '90%';
+    width: 35px;
+    height: 35px;
+    background-color: var(--text-col);
+    color: var(--per-col);
+    border-radius: 10px 10px 80px 80px;
+    position: absolute;
+    right: -13px;
+    bottom: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main > #skill-sec >.skill-lft >.css-box{
+    width: 80%;
+    height: 110px;
+    background-color: var(--bg-lgt-bl);
+    border-radius: 20px;
+    padding: 15px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main > #skill-sec >.skill-lft >.css-box >span{
+    position: absolute;
+    left: 100px;
+    top: 30px;
+    font-size: 28px;
+}
+
+main > #skill-sec >.skill-lft >.css-box >.css-per{
+    width: 90%;
+    height: 5px;
+    background-color: var(--text-col);
+    position: relative;
+}
+
+main > #skill-sec >.skill-lft >.css-box >.css-per::before{
+    content: '90%';
+    width: 35px;
+    height: 35px;
+    background-color: var(--text-col);
+    color: var(--per-col);
+    border-radius: 10px 10px 80px 80px;
+    position: absolute;
+    right: -13px;
+    bottom: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main > #skill-sec >.skill-rgt{
+    width: 50%;
+    height: 100%;
+    padding-top: 200px;
+    display: flex;
+    align-items: center;
+    row-gap: 30px;
+    flex-direction: column;
+}
+
+main > #skill-sec >.skill-rgt img{
+    width: 70px;
+}
+ 
+main > #skill-sec >.skill-rgt >.sass-box{
+    width: 80%;
+    height: 110px;
+    background-color: var(--bg-lgt-bl);
+    border-radius: 20px;
+    padding: 15px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main > #skill-sec >.skill-rgt >.sass-box >span{
+    position: absolute;
+    left: 100px;
+    top: 30px;
+    font-size: 28px;
+}
+
+main > #skill-sec >.skill-rgt >.sass-box >.sass-per{
+    width: 85%;
+    height: 5px;
+    background-color: var(--text-col);
+    position: relative;
+}
+
+main > #skill-sec >.skill-rgt >.sass-box >.sass-per::before{
+    content: '85%';
+    width: 35px;
+    height: 35px;
+    background-color: var(--text-col);
+    color: var(--per-col);
+    border-radius: 10px 10px 80px 80px;
+    position: absolute;
+    right: -13px;
+    bottom: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main > #skill-sec >.skill-rgt >.js-box{
+    width: 80%;
+    height: 110px;
+    background-color: var(--bg-lgt-bl);
+    border-radius: 20px;
+    padding: 15px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main > #skill-sec >.skill-rgt >.js-box >img{
+    width: 60px;
+}
+
+main > #skill-sec >.skill-rgt >.js-box >span{
+    position: absolute;
+    left: 100px;
+    top: 30px;
+    font-size: 28px;
+}
+
+main > #skill-sec >.skill-rgt >.js-box >.js-per{
+    width: 80%;
+    height: 5px;
+    background-color: var(--text-col);
+    position: relative;
+}
+
+main > #skill-sec >.skill-rgt >.js-box >.js-per::before{
+    content: '80%';
+    width: 35px;
+    height: 35px;
+    background-color: var(--text-col);
+    color: var(--per-col);
+    border-radius: 10px 10px 80px 80px;
+    position: absolute;
+    right: -13px;
+    bottom: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* portfolio section css here */
+
+main > #port-sec{
+
+    max-width: 1920px;
+    background-color:var(--bg-col);
+    margin: 0 auto;
+    position: relative;
+    top: 100vh;
+    padding: 250px 0 20px 0;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+main > #port-sec >.port-text-top{
+    width: 220px;
+    height: 100px;
+    box-shadow: 0 0 10px 1px var(--text-bl);
+    border-radius: 15px;
+    position: absolute;
+    top: 85px;
+    left: calc(50% - 110px);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+main > #port-sec >.port-text-top >p{
+    font-family: sans-serif;
+    font-weight: bold;
+    color: var(--text-col);
+    font-size: 13px;
+}
+
+main > #port-sec >.port-text-top >h2{
+    font-family: ser;
+    font-size: 45px;
+    color: var(--text-bl);
+}
+
+main > #port-sec > .btn{
+    width: 180px;
+    height: 35px;
+    position: absolute;
+    top: 210px;
+    left: calc(50% - 90px);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+main > #port-sec > .btn >button{
+    font-family: ser;
+    font-weight: bold;
+    border-radius: 15px;
+    background-color: var(--text-bl); 
+    border: none;
+    color: black; 
+    font-size: 20px;
+}
+
+main > #port-sec > .btn >button:first-child{
+    width: 50px;
+    height: 100%;
+}
+
+main > #port-sec > .btn >button:last-child{
+    width: 105px;
+    height: 100%;
+}
+
+main > #port-sec > .port-box{
+    width: 85%;
+    padding: 20px 0 20px 0;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    overflow: hidden;
+}
+
+main > #port-sec > .port-box .all{
+    width: 25%;
+    height: 270px;
+    border-radius: 15px;
+    position: relative;
+}
+
+main > #port-sec > .port-box h2{
+    font-family: ser;
+    color: var(--text-col);
+    position: absolute;
+    bottom: 45px;
+    left: 20px;
+}
+
+main > #port-sec > .port-box a{
+    background-color: rgba(167, 112, 222, 0.847);
+    color: black;
+    border-radius: 15px;
+    text-decoration: none;
+    font-family: ser;
+    padding: 8px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 5px;
+    left: 15px;
+}
+
+main > #port-sec > .port-box > .port-1{
+    background: url(../assets/img/army.jpg);
+    background-size: 100% 70%;
+    box-shadow: 0 0 15px 0 var(--port-col);  
+    background-repeat: no-repeat;
+    background-position: top;
+    transition: all 0.5s;
+}
+
+main > #port-sec > .port-box > .port-1:hover{
+    transform: translateY(-10px) ;
+}
+
+main > #port-sec > .port-box > .port-2{
+    background: url(../assets/img/light.png);
+    background-size: 110% 70%;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 15px 0 var(--port-col); 
+    background-position: top;
+    transition: all 0.5s;
+}
+
+main > #port-sec > .port-box > .port-2:hover{
+    transform: translateY(-10px) ;
+}
+
+main > #port-sec > .port-box > .port-3{
+    background: url(../assets/img/jonas.jpg);
+    background-size: 120% 70%;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 15px 0 var(--port-col); 
+    background-position: top;
+    transition: all 0.5s;
+}
+
+main > #port-sec > .port-box > .port-3:hover{
+    transform: translateY(-10px) ;
+}
+
+main > #port-sec > .port-box > .port-4{
+    background: url(../assets/img/solar.jpg);
+    background-size: 120% 70%;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 15px 0 var(--port-col); 
+    background-position: top;
+    transition: all 0.5s;
+}
+
+main > #port-sec > .port-box > .port-4:hover{
+    transform: translateY(-10px) ;
+}
+
+main > #port-sec > .port-box > .port-5{
+    background: url(../assets/img/unseen.jpg);
+    background-size: 110% 70%;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 15px 0 var(--port-col); 
+    background-position: top;
+    transition: all 0.5s;
+}
+
+main > #port-sec > .port-box > .port-5:hover{
+    transform: translateY(-10px) ;
+}
+
+main > #port-sec > .port-box > .port-6{
+    background: url(../assets/img/ui.jpg);
+    background-size: 120% 70%;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 15px 0 var(--port-col); 
+    background-position: top;
+    transition: all 0.5s;
+}
+
+main > #port-sec > .port-box > .port-6:hover{
+    transform: translateY(-10px) ;
+}
+
+main > #port-sec > .port-box > .port-7{
+    background: url(../assets/img/hotel.jpg);
+    background-size: 120% 70%;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 15px 0 var(--port-col); 
+    background-position: top;
+    transition: all 0.5s;
+}
+
+main > #port-sec > .port-box > .port-7:hover{
+    transform: translateY(-10px) ;
+}
+
+/* contact section css here */
+
+::placeholder{
+    font-family: ser;
+}
+
+main > #cont-sec{
+    max-width: 1920px;
+    height: 100vh;
+    background-color: var(--bg-col);
+    margin: 0 auto;
+    position: relative;
+    top: 100vh;
+    display: flex;
+    overflow: hidden;
+}
+
+main > #cont-sec > .cont-text-top{
+    width: 230px;
+    height: 100px;
+    box-shadow: 0 0 10px 1px var(--text-bl);
+    border-radius: 15px;
+    position: absolute;
+    top: 85px;
+    left: calc(50% - 115px);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+main > #cont-sec > .cont-text-top >p{
+    font-family: sans-serif;
+    font-weight: bold;
+    color: var(--text-col);
+    font-size: 13px;
+}
+
+main > #cont-sec >.cont-text-top >h2{
+    font-family: ser;
+    font-size: 40px;
+    color: var(--text-bl);
+}
+
+main > #cont-sec >.cont-lft{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    row-gap: 20px;
+    align-items: center;
+    padding-top: 160px;
+    flex-direction: column;
+}
+
+main > #cont-sec >.cont-lft a{
+    width: 55%;
+    height: 100px;
+    border-radius: 20px;
+    background-color: var(--bg-lgt-bl);
+    padding: 20px;
+    text-decoration: none;
+    color: var(--text-col);
+}
+
+main > #cont-sec >.cont-lft .cont{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    position: relative;
+}
+
+main > #cont-sec >.cont-lft h2{
+    font-family: ser;
+    font-size: 28px;
+}
+
+main > #cont-sec >.cont-lft span{
+    font-size: 14px;
+    color: var(--text-col);
+    position: absolute;
+    bottom: -5px;
+    left: 55px;
+}
+
+main > #cont-sec >.cont-lft i{
+    color: var(--text-col);
+    font-size: 35px;
+}
+
+/* contact section form code here */
+
+main > #cont-sec >.cont-rgt{
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+
+main > #cont-sec >.cont-rgt > .cont-form > form{
+    width: 60%;
+    height: 60%;
+    border-radius: 20px;
+    position: absolute;
+    top: 160px;
+    left: 140px;
+    display: flex;
+    flex-direction: column;
+}
+
+main > #cont-sec >.cont-rgt > .cont-form > form >.name{
+    width: 100%;
+    height: 45px;
+    position: relative;
+}
+
+main > #cont-sec >.cont-rgt > .cont-form > form >.name >label{
+    position: absolute;
+    top: -6px;
+    left: 15px;
+}
+
+main > #cont-sec >.cont-rgt > .cont-form > form >.e-m{
+    width: 100%;
+    height: 45px;
+    position: relative;
+}
+
+main > #cont-sec >.cont-rgt > .cont-form > form >.e-m >label{
+    background-color:var(--bg-col);
+    position: absolute;
+    top: -5px;
+    left: 15px;
+}
+
+main > #cont-sec >.cont-rgt > .cont-form > form >.phn-no{
+    width: 100%;
+    height: 45px;
+    position: relative;
+}
+
+main > #cont-sec >.cont-rgt > .cont-form > form >.phn-no label{
+    background-color:var(--bg-col);
+    position: absolute;
+    top: -6px;
+    left: 15px;
+}
+
+main > #cont-sec >.cont-rgt > .cont-form > form >.write{
+    width: 100%;
+    height: 120px;
+    position: relative;
+}
+
+main > #cont-sec >.cont-rgt > .cont-form > form >.write >label{
+    background-color:var(--bg-col);
+    position: absolute;
+    top: -5px;
+    left: 15px;
+}
+
+main > #cont-sec >.cont-rgt > .cont-form > form >.write >textarea{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    padding: 30px 20px;
+    resize: none;
+    background-color: transparent;
+    border: 1px solid var(--text-col);
+}
+
+main > #cont-sec >.cont-rgt > .cont-form label{
+    background-color:var(--bg-col);
+    color: var(--text-col);
+    font-size: 12px;
+    font-family: ser;
+}
+
+main > #cont-sec >.cont-rgt > .cont-form input{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background-color: transparent;
+    padding: 0 20px;
+    border: 1px solid var(--text-col);
+}
+
+main > #cont-sec >.cont-rgt > .cont-form .sbm{
+    width: 120px;
+    height: 50px;
+    background-color: var(--text-bl);
+    border: none;
+    color: var(--per-col);
+    font-family: ser;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+/* footer css code here */
+
+footer{
+    width: 100%;
+    background-color: var(--foot-col);
+    position: relative;
+    top: 100vh;
+}
+
+footer >.foot{
+    max-width: 1920px;
+    margin: 0 auto;
+    display: flex;
+    justify-content:center;
+}
+
+footer >.foot >.foot-main{
+    width: 450px;
+    min-height: 280px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+footer >.foot >.foot-main >h2{
+    font-family: ser;
+    font-size: 40px;
+    text-align: center;
+    color: var(--per-col);
+}
+
+footer >.foot >.foot-main >.cont-foot{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+}
+
+footer >.foot >.foot-main i{
+    font-size: 30px;
+    color: var(--per-col);
+}
+
+footer >.foot >.foot-main >p{
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 12px;
+}

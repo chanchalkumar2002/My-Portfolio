@@ -1,0 +1,162 @@
+
+
+@media (max-width:1170px){
+
+    main >.text-vid >.move >p{
+        display: none;
+    }
+    main >.text-vid >.move::before{
+        display: none;
+    }
+    main >.text-vid >.move::after{
+        display: none;
+    }
+    main >.lig-text{
+        padding: 0 0;
+    }
+}
+
+@media (max-width:1098px){
+
+    main >.text-vid >.money-vid{
+        width: 85%;
+    }
+}
+@media (max-width:960px){
+  
+    main >.lig-text >h3{
+        font-size: 40px;
+    }
+    main >.text-vid >.idea-film >h2{
+        font-size: 100px;
+    }
+    main >.text-vid >.move >h2{
+        font-size: 100px;
+    }
+}
+
+@media (max-width:800px){
+
+    header >nav >.right >a{
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+    main >.text-vid >.idea-film >h2{
+        font-size: 85px;
+    }
+    main >.text-vid >.move >h2{
+        font-size: 85px;
+    }
+    main >.text-vid >.money-vid{
+        width: 85%;
+        height: 400px;
+        bottom: 130px;
+    }
+    main >.text-vid >.text-rot{
+        bottom: 100px;
+    }
+    main >.work >h2{
+        font-size: 70px;
+    }
+    main >.lig-text >h3{
+        font-size: 30px;
+    }
+}
+
+@media (max-width:700px){
+
+    main >.text-vid >.idea-film >h2{
+        font-size: 65px;
+    }
+    main >.text-vid >.move >h2{
+        font-size: 65px;
+    }
+    main >.text-vid >.money-vid{
+        width: 85%;
+        height: 400px;
+        bottom: 150px;
+    }
+    header >nav >.right >a{
+        font-size: 13px;
+        padding: 10px 20px;
+    }
+    header >nav >.right >.rig-line{
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width:616px){
+
+    main >.lig-text >h3{
+        font-size: 26px;
+    }
+    main >.text-vid >.idea-film >p{
+        display: none;
+    }
+    main >.text-vid >.idea-film >h2{
+        text-align: center;
+    }
+    main >.text-vid >.move{
+        width: 100%;
+    }
+    main >.text-vid >.money-vid{
+        width: 100%;
+        height: 350px;
+        bottom: 200px;
+    }
+    main >.text-vid >.text-rot{
+        bottom: 150px;
+    }
+    header >nav >.right >a{
+        font-size: 11px;
+        padding: 10px 20px;
+    }
+}
+@media (max-width:550px){
+    header >nav >.right{
+        width: 50%;
+    }
+    header >nav >.right >a{
+        font-size: 10px;
+        padding: 5px 10px;
+    }
+    main >.lig-text >h3{
+        font-size: 20px;
+    }
+   
+}
+@media (max-width:450px){
+
+    main >.lig-text >h3{
+        font-size: 15px;
+    }
+    header >nav >.right >a{
+        display: none;
+    }
+    main >.text-vid >.idea-film{
+        z-index: 5;
+    }
+    main >.lig-text >h3 >.pink-box{
+        width: 20px;
+        height: 20px;
+    }main >.lig-text >h3 >.pink-box >.blk-box{
+        width: 15px;
+        height: 15px;
+        top: calc(50% - 7.5px);
+        left: calc(50% - 7.5px);
+    }
+    main >.lig-text >h3 >.grn-box{
+        width: 20px;
+        height: 20px;
+    }
+    main >.lig-text >h3 >.grn-box >.blk-box-2{
+        width: 15px;
+        height: 15px;
+        top: calc(50% - 7.5px);
+        left: calc(50% - 7.5px);
+    }
+    header >nav >.left{
+        width: 100%;
+    }
+}

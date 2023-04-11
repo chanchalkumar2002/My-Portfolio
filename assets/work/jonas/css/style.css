@@ -1,0 +1,564 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+    cursor: none;
+    min-height: 550vh;
+}
+.cursor{
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    mix-blend-mode: difference;
+    position: fixed;
+    z-index: 999;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+.cursor >img{
+    width: 100%;
+    height: 100%;
+  
+}
+header{
+    width: 100%; 
+    background-color: #efefef;
+    padding-bottom: 10px;
+    position: fixed;
+    top:0;
+    left:0;
+}
+header >.head{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 35% 50%;
+}
+header >.head >.h-left{
+    min-height: 80px;
+    display: grid;
+    align-items: center;
+}
+header >.head >.h-left >h2{
+    font-family: sans-serif;
+    font-size: 23px;
+    
+}
+
+header >.head >.h-right >ul{
+    list-style: none;
+    min-height: 80px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 55px 65px 65px;
+    column-gap: 35px;
+}
+header >.head >.h-right >ul >li{
+    font-family: sans-serif;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+}
+header >.head >.h-right >ul >li:first-child{
+    background-color: black;
+    color: white;
+    position: relative;
+}
+header >.head >.h-right >ul >li:first-child::before{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: red;
+    position: absolute;
+    bottom:-3px;
+    left: 0;
+}
+header >.head >.h-right >ul >li:nth-child(2){
+    position: relative;
+}
+header >.head >.h-right >ul >li:nth-child(2):hover{
+    color: white;
+    z-index: 2;
+}
+header >.head >.h-right >ul >li:nth-child(2)::before{
+    content: '';
+    width: 0%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.4s;
+    z-index: -2;
+}
+header >.head >.h-right >ul >li:nth-child(2):hover::before{
+    width: 100%;   
+}
+header >.head >.h-right >ul >li:last-child{
+    position: relative;
+}
+header >.head >.h-right >ul >li:last-child:hover{
+    color: white;
+    z-index: 2;
+}
+header >.head >.h-right >ul >li:last-child::before{
+    content: '';
+    width: 0%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.4s;
+    z-index: -2;
+}
+header >.head >.h-right >ul >li:last-child:hover::before{
+    width: 100%;
+}
+header >.cont-foun{
+    max-width: 1200px;
+    min-height: 250px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 30% 60%;
+    align-items: flex-end;
+}
+
+header >.cont-foun >.cont >p{
+    font-family: sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    color: rgb(255, 92, 33);
+}
+
+header >.cont-foun >.foun >.foun-text{
+    display: grid;
+    row-gap: 20px;
+}
+header >.cont-foun >.foun >.foun-text >h2{
+    font-family: sans-serif;
+    font-size: 45px;
+    font-weight:100;
+}
+header >.cont-foun >.foun >.foun-text >p{
+    font-family: sans-serif;
+    font-size: 15px;
+}
+main{
+    width: 100%;
+    background-color: #efefef;
+    position: relative;
+    top:335px;
+    left: 0;
+
+}
+main >.std{
+    width: 100%;
+    min-height: 300px;
+    border: 1px solid gray;
+    display:grid;
+    grid-template-columns:auto 300px 300px 300px 300px auto;
+    padding: 15px 0;
+}
+main >.std div{
+    border: 1px solid gray;
+}
+main >.std >.std-vid >video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+main >.std >.std-vid >.std-text{
+    width: 300px;
+    height: 16px;
+    position: absolute;
+    top: 0px;
+    display: grid;
+    grid-template-columns:80px 55px;
+    justify-content: space-between;
+    transition: all 0.3s;
+}
+main >.std >.std-vid >.std-text >p{
+    font-family: sans-serif;
+    font-size: 10px;
+    font-weight:bold;
+}
+main >.std >.std-vid:hover >.std-text{
+    background-color: black;
+    color: white;
+}
+main >.esp{
+    width: 100%;
+    min-height: 300px;
+    border: 1px solid gray;
+    position: relative;
+    display:grid;
+    grid-template-columns:auto 300px 300px 300px 300px auto;
+    padding: 15px 0;
+}
+main >.esp div{
+    border: 1px solid gray;
+}
+main >.esp >.esp-vid >video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+main >.esp >.esp-vid >.esp-text{
+    width: 300px;
+    height: 16px;
+    position: absolute;
+    top: 0px;
+    display: grid;
+    grid-template-columns:130px 55px;
+    justify-content: space-between;
+    transition: all 0.3s;
+}
+main >.esp >.esp-vid >.esp-text >p{
+    font-family:sans-serif;
+    font-size: 10px;
+    font-weight:bold;
+}
+main >.esp >.esp-vid:hover >.esp-text{
+    background-color: black;
+    color: white;
+}
+main >.alan{
+    width: 100%;
+    min-height: 300px;
+    border: 1px solid gray;
+    position: relative;
+    display:grid;
+    grid-template-columns:auto 300px 300px 300px 300px auto;
+    padding: 15px 0;
+}
+main >.alan div{
+    border: 1px solid gray;
+}
+main >.alan >.alan-vid >video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+main >.alan >.alan-vid >.alan-text{
+    width: 300px;
+    height: 16px;
+    position: absolute;
+    top: 0px;
+    display: grid;
+    grid-template-columns:130px 55px;
+    justify-content: space-between;
+    transition: all 0.3s;
+}
+main >.alan >.alan-vid >.alan-text >p{
+    font-family:sans-serif;
+    font-size: 10px;
+    font-weight:bold;
+}
+main >.alan >.alan-vid:hover >.alan-text{
+    background-color: black;
+    color: white;
+}
+main >.ever{
+    width: 100%;
+    min-height: 300px;
+    border: 1px solid gray;
+    position: relative;
+    display:grid;
+    grid-template-columns:auto 300px 300px 300px 300px auto;
+    padding: 15px 0;
+}
+main >.ever div{
+    border: 1px solid gray;
+
+}
+main >.ever >.ever-img >.ever-text{
+    width: 300px;
+    height: 16px;
+    position: absolute;
+    top: 0px;
+    display: grid;
+    grid-template-columns:130px 55px;
+    justify-content: space-between;
+    transition: all 0.3s;
+}
+main >.ever >.ever-img >.ever-text >p{
+    font-family:sans-serif;
+    font-size: 10px;
+    font-weight:bold;
+}
+main >.ever >.ever-img:hover >.ever-text{
+    background-color: black;
+    color: white;
+}
+main >.wit{
+    width: 100%;
+    min-height: 300px;
+    border: 1px solid gray;
+    position: relative;
+    display:grid;
+    grid-template-columns:auto 300px 300px 300px 300px auto;
+    padding: 15px 0;
+}
+main >.wit div{
+    border: 1px solid gray;
+}
+main >.wit >.wit-img >.wit-text{
+    width: 300px;
+    height: 16px;
+    position: absolute;
+    top: 0px;
+    display: grid;
+    grid-template-columns:130px 55px;
+    justify-content: space-between;
+    transition: all 0.3s;
+}
+main >.wit >.wit-img >.wit-text >p{
+    font-family:sans-serif;
+    font-size: 10px;
+    font-weight:bold;
+}
+main >.wit >.wit-img:hover >.wit-text{
+    background-color: black;
+    color: white;
+}
+main >.ink{
+    width: 100%;
+    min-height: 300px;
+    border: 1px solid gray;
+    position: relative;
+    display:grid;
+    grid-template-columns:auto 300px 300px 300px 300px auto;
+    padding: 15px 0; 
+}
+main >.ink div{
+    border: 1px solid gray;
+}
+main >.ink >.ink-img >.ink-text{
+    width: 300px;
+    height: 16px;
+    position: absolute;
+    top: 0px;
+    display: grid;
+    grid-template-columns:130px 55px;
+    justify-content: space-between;
+    transition: all 0.3s;
+}
+main >.ink >.ink-img >.ink-text >p{
+    font-family:sans-serif;
+    font-size: 10px;
+    font-weight:bold; 
+}
+main >.ink >.ink-img:hover >.ink-text{
+    background-color: black;
+    color: white;
+}
+main >.hello{
+    width: 100%;
+    min-height: 300px;
+    border: 1px solid gray;
+    position: relative;
+    display:grid;
+    grid-template-columns:auto 300px 300px 300px 300px auto;
+    padding: 15px 0; 
+}
+main >.hello div{
+    border: 1px solid gray;
+}
+main >.hello >.hello-vid >video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+main >.hello >.hello-vid >.hello-text{
+    width: 300px;
+    height: 16px;
+    position: absolute;
+    top: 0px;
+    display: grid;
+    grid-template-columns:130px 55px;
+    justify-content: space-between;
+    transition: all 0.3s;
+}
+main >.hello >.hello-vid >.hello-text >p{
+    font-family:sans-serif;
+    font-size: 10px;
+    font-weight:bold; 
+}
+main >.hello >.hello-vid:hover >.hello-text{
+    background-color: black;
+    color: white;
+}
+main >.moog{
+    width: 100%;
+    min-height: 300px;
+    border: 1px solid gray;
+    position: relative;
+    display:grid;
+    grid-template-columns:auto 300px 300px 300px 300px auto;
+    padding: 15px 0; 
+}
+main >.moog div{
+    border: 1px solid gray;
+}
+main >.moog >.moog-img >.moog-text{
+    width: 300px;
+    height: 16px;
+    position: absolute;
+    top: 0px;
+    display: grid;
+    grid-template-columns:130px 50px;
+    justify-content: space-between;
+    transition: all 0.3s;
+}
+main >.moog >.moog-img >.moog-text >p{
+    font-family:sans-serif;
+    font-size: 10px;
+    font-weight:bold; 
+}
+main >.moog >.moog-img:hover >.moog-text{
+    background-color: black;
+    color:white;
+}
+main >.mad{
+    width: 100%;
+    min-height: 300px;
+    border: 1px solid gray;
+    position: relative;
+    display:grid;
+    grid-template-columns:auto 300px 300px 300px 300px auto;
+    padding: 15px 0; 
+}
+main >.mad div{
+    border: 1px solid gray;
+}
+main >.mad >.mad-img >.mad-text{
+    width: 300px;
+    height: 16px;
+    position: absolute;
+    top: 0px;
+    display: grid;
+    grid-template-columns:130px 50px;
+    justify-content: space-between;
+    transition: all 0.3s;
+}
+main >.mad >.mad-img >.mad-text >p{
+    font-family:sans-serif;
+    font-size: 10px;
+    font-weight:bold; 
+}
+main >.mad >.mad-img:hover >.mad-text{
+    background: black;
+    color: white;
+}
+footer{
+    width: 100%;
+    background-color: #efefef;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: -2;
+}
+footer >.foot{
+    max-width: 1200px;
+    min-height: 450px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+footer >.foot >.foot-left{
+    display: grid;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+footer >.foot >.foot-left >.cir-arrw{
+    width: 250px;
+    height: 250px;
+    background-color: white;
+    border-radius: 50%;
+
+}
+footer >.foot >.foot-left >.cir-arrw >.arrw{
+    width: 15px;
+    height: 50%;
+    background-color: orangered;
+    position: relative;
+    top: 20%;
+    left: calc(50% - 5px);
+}
+footer >.foot >.foot-left >.cir-arrw >.arrw::before{
+    content: '';
+    width: 15px;
+    height: 50%;
+    position: absolute;
+    background-color: orangered;
+    left: -24px;
+    transform: rotate(45deg);
+    top: -3px;
+}
+footer >.foot >.foot-left >.cir-arrw >.arrw::after{
+    content: '';
+    width: 15px;
+    height: 50%;
+    background-color: orangered;
+    position: absolute;
+    right: -24px;
+    transform: rotate(-45deg);
+    top: -3px;
+}
+footer >.foot >.foot-right{
+    padding-bottom: 20px;
+    display: grid;
+    align-items: flex-end;
+}
+footer >.foot >.foot-right >.f-r-up{
+    width: 500px;
+}
+footer >.foot >.foot-right >.f-r-up >h2{
+    font-family: sans-serif;
+    font-size: 30px;
+}
+footer >.foot >.foot-right >.f-r-center{
+    width: 200px;
+}
+footer >.foot >.foot-right >.f-r-center >p{
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+}
+footer >.foot >.foot-right >.f-r-center >h3{
+    font-family: sans-serif;
+    font-size: 22px;
+    margin-top: 5px;
+}
+footer >.foot >.foot-right >.f-r-bottom{
+    width: 100%;
+    background-color: #efefef;
+}
+footer >.foot >.foot-right >.f-r-bottom >p{
+    font-family: sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    margin-left: 8px;
+}
+footer >.foot >.foot-right >.f-r-bottom >ul{
+    list-style: none;
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: 80px 80px 80px 80px 80px;
+    column-gap: 10px;
+    font-family: sans-serif;
+}
+footer >.foot >.foot-right >.f-r-bottom >ul >li{
+    transition: all 0.5s;
+    text-align: center;
+}
+footer >.foot >.foot-right >.f-r-bottom >ul >li:hover{
+    background-color: black;
+    color: white;
+}

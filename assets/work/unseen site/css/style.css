@@ -1,0 +1,533 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.first-up{
+    width: 100%;
+    height: 100vh;
+    background-color: #212121;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+    padding-top: 10%;
+    position: fixed;
+    top: 0%;
+    animation-name: first-up;
+    animation-duration: 8s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    z-index: 2;
+}
+@keyframes first-up{
+    0%{
+        top:0%;
+    }
+    70%{
+        top: 0%;
+    }
+    100%{
+        top: -100%;
+    }
+}
+
+.first-up >.ani-box{
+    color: whitesmoke;
+    width: 120px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px; 
+    position: relative;
+    overflow: hidden;
+}
+.first-up >.ani-box div{
+    font-size: 80px;
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.first-up >.ani-box >.u{
+    position: absolute;
+    left: -100%;
+    top: 0;
+    animation-name: u;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}    
+@keyframes u{
+    0%{
+       left: -100%; 
+       top: 0;
+    }
+    30%{
+        top: 0;
+        left: 0%;
+    }
+    50%{
+        top: -100%;
+        left: 0;
+    }
+    70%{
+        left: -100%;
+        top: -100%;
+    }
+}
+.first-up >.ani-box >.n{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    animation-name: n;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 0.5s;
+}
+@keyframes n{
+    0%{
+        top: 100%;
+        left: 0;
+    }
+    30%{
+        top: 0;
+        left: 0%;
+    }
+    50%{
+        top: 0%;
+        left: 100%;
+    }
+    70%{
+        left: 100%;
+        top: 100%;
+    }
+}
+.first-up >.ani-box >.s{
+    position: absolute;
+    left: -100%;
+    top: 0;
+    animation-name: s;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+}
+@keyframes s{
+    0%{
+        left: -100%; 
+        top: 0;
+    }
+    30%{
+         top: 0;
+         left: 0%;
+    }
+    50%{
+         top: -100%;
+         left: 0;
+    }
+    70%{
+         left: -100%;
+         top: -100%;
+    }
+}
+.first-up >.ani-box >.e-f{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    animation-name: e-f;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 1.5s;
+}
+@keyframes e-f{
+    0%{
+        top: 100%;
+        left: 0;
+    }
+    30%{
+        top: 0;
+        left: 0%;
+    }
+    50%{
+        top: 0%;
+        left: 100%;
+    }
+    70%{
+        left: 100%;
+        top: 100%;
+    }
+}
+.after-up{
+    width: 100%;
+    height: 100vh;
+    background-color: #efded9;
+    position: relative;
+    top: 0vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10% 0 0 0;
+    transition: all 3s;
+    
+}
+.after-up >.un-text{
+    width: 370px;
+    height: 120px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    z-index: 999;
+}
+.after-up >.un-text >h3{
+    text-align: center;
+    color: #666261;
+    font-family: sans-serif;
+    font-weight: 100;
+    position: relative;
+    font-size: 20px;
+}
+.after-up >.un-text >p{
+    text-align: center;
+    color: #666261;
+    font-size: 15px;
+    font-family: sans-serif;
+}
+.after-up >.un-text >h3 >span{
+    font-size: 12.5px;
+    position: absolute;
+    top: 0;
+    font-weight: bold;
+}
+.after-up >.eye-main{
+    width: 230px;
+    height:100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.after-up >.eye-main >.eye-left{
+    width: 55px;
+    height: 70px;
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 50%;
+    transform: rotate(13deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.after-up >.eye-main >.eye-left >.bl-cir-left{
+    width: 30px;
+    height: 45px;
+    background-color: black;
+    border-radius: 50%;
+    position: relative;
+    transition: all 0.3s;
+}
+.after-up >.eye-main >.eye-left >.bl-cir-left >.wh-cir-left{
+    width: 15px;
+    height: 25px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    bottom:5px;
+    right: 1px;
+}
+.after-up >.eye-main >.eye-right{
+    width: 60px;
+    height: 80px;
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 50%;
+    transform: rotate(14deg);
+    margin-left: -10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.after-up >.eye-main >.eye-right >.bl-cir-right{
+    width: 35px;
+    height: 50px;
+    background-color: black;
+    border-radius: 50%;   
+    position: relative;
+}
+.after-up >.eye-main >.eye-right >.bl-cir-right >.wh-cir-right{
+    width: 20px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    bottom:3px;
+    right: 1.5px;
+}
+.after-up >p{
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+    bottom:5%;
+}
+.after-up >button{
+    width: 110px;
+    height: 40px;
+    font-size: 16.5px;
+    border-radius: 25px;
+    border: none;
+    transition: all 0.3s;
+}
+.after-up >button:hover{
+    background-color: black;
+    color: white;
+}
+.after-up >button >i{
+    transform: rotate(225deg);
+    font-size: 14px;
+}
+
+.main-site{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 3s;
+}
+.main-site >video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.main-site >.head{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 20px;
+}
+.main-site >.head >.un-st{
+    width: 25%;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-site >.head >.un-st >h2{
+    font-family: emoji;
+    font-size: 40px;
+    font-weight: 100;
+    font-weight: bold;
+    color: whitesmoke;
+    position: relative;
+}
+.main-site >.head >.un-st >h2 >.st{
+    font-family: system-ui;
+    font-weight: 400;
+    font-size: 35px;
+    
+}
+.main-site >.head >.un-st >h2 >.r{
+    font-size: 17px;
+    position: absolute;
+    top: 10px;
+    font-weight: bold;
+}
+.main-site >.head >.list{
+    width: 35%; 
+}
+.main-site >.head >.list >ul{
+    list-style:none;
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 35px;
+    font-family: sans-serif;
+    font-size: 18px;
+    color: whitesmoke;
+}
+.main-site >.head >.list >ul >li >.two-dt{
+    width: 45px;
+    height: 45px;
+    background-color: white;
+    border-radius: 50%;
+    position: relative;
+}
+.main-site >.head >.list >ul >li >.two-dt::before{
+    content: '';
+    width: 8px;
+    height: 8px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 19px;
+    left: 12px;
+}
+.main-site >.head >.list >ul >li >.two-dt::after{
+    content: '';
+    width: 8px;
+    height: 8px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 19px;
+    left: 25px;
+}
+.main-site >.foot{
+    width: 100%;
+    display: flex;
+    position: absolute;
+    bottom: 0px;
+    padding: 20px;
+}
+.main-site >.foot >.foot-left{
+    width: 45%;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    column-gap: 25px;
+}
+.main-site >.foot >.foot-left >.foot-lf{
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+.main-site >.foot >.foot-left >.foot-lf >.foot-line{
+    width: 4px;
+    height: 24px;
+    background-color: black;
+    position: relative;
+    top: calc(50% - 12px);
+    left: calc(50% - 2px);
+}
+.main-site >.foot >.foot-left >.foot-lf >.foot-line::before{
+    content: '';
+    width: 4px;
+    height: 18px;
+    background-color: black;
+    position: absolute;
+    left: -7px;
+    bottom: 0;
+}
+.main-site >.foot >.foot-left >.foot-lf >.foot-line::after{
+    content: '';
+    width: 4px;
+    height: 14px;
+    background-color: black;
+    position: absolute;
+    right: -6px;
+    bottom: 0;
+}
+.main-site >.foot >.foot-left >a{
+    text-decoration: none;
+    color: white;
+    padding: 10px 45px 10px 45px;
+    border: 2px solid white;
+    border-radius: 25px;
+    font-size: 18px;
+    transition: all 0.5s;
+    font-weight: bold;
+}
+.main-site >.foot >.foot-left >a:hover{
+    border: 2px solid black;
+    color: black;
+}
+.main-site >.foot >.foot-center{
+    width: 10%;
+    min-height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-site >.foot >.foot-right{
+    width: 45%;
+    min-height: 60px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.main-site >.foot >.foot-right >p{
+    font-family: sans-serif;
+    font-weight: bold;
+    color: white;
+}
+.main-site >.foot >.foot-center >.foot-cf{
+    width: 45px;
+    height: 45px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-site >.foot >.foot-center >.foot-cf:hover{
+    background-color: black;
+}
+.main-site >.foot >.foot-center >.foot-cf:hover >i{
+    color: white;
+}
+.main-site >.foot >.foot-center >.foot-cf >i{
+    font-size: 35px;
+    transition: all 0.5s;
+}
+.main-site >.center-text{
+    width: 600px;
+    height: 320px;
+    position: absolute;
+    top: calc(50% - 160px);
+    left: calc(50% - 300px);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 20px;
+}
+.main-site >.center-text >p{
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    color: whitesmoke;
+}
+.main-site >.center-text >h2{
+    font-size: 60px;
+    font-family: sans-serif;
+    text-align: center;
+    font-weight: 100;
+    line-height: 1;
+    color: whitesmoke;
+}
+.main-site >.center-text >h2 >span{
+    font-family: emoji;
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.main-site >.center-text >a{
+    background-color: white;
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+    font-size: 13px;
+    font-family: sans-serif;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: all 0.5s;
+}
+.main-site >.center-text >a:hover{
+    background-color: black;
+    color: white;
+}
+.main-site >.center-text >a >i{
+    transform: rotate(45deg);
+}
